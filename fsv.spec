@@ -12,7 +12,6 @@ Summary: Fsv - 3D File System Visualizer
 Source: %{name}-%{version}.tar.bz2
 Buildrequires: gtk+-devel MesaGLU-devel glib-devel
 Buildrequires: gtkglarea-devel 
-BuildRoot: %{_tmppath}/%{name}-buildroot
 
 %description
 fsv (pronounced effessvee) is a file system visualizer in cyberspace. It
