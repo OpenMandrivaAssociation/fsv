@@ -41,15 +41,15 @@ install -m 644 fsv.wmconfig $RPM_BUILD_ROOT/etc/X11/wmconfig/fsv
 
 
 (cd $RPM_BUILD_ROOT
-mkdir -p ./%{_menudir}
-cat > ./%{_menudir}/%{name} <<EOF
-?package(%{name}):\
-command="%{_bindir}/fsv"\
-title="Fsv"\
-longtitle="3D file browser"\
-needs="x11"\
-icon="file_tools_section.png"\
-section="Applications/File tools"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_bindir}/fsv
+Name=Fsv
+Comment=3D file browser
+Icon=file_tools_section
+Categories=X-MandrivaLinux-System-FileTools;System;
 EOF
 )    
 
@@ -70,5 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/X11/wmconfig/fsv
 %{_bindir}/*
 ## %{prefix}/share/locale/*/*/*
-%{_menudir}/*
+%{_datadir}/applications/mandriva-*.desktop
 
