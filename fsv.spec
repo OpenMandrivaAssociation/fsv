@@ -7,7 +7,7 @@ Version: %{version}
 Release: %{release}
 Group: File tools
 License: LGPL
-URL: http://fsv.sourceforge.net/
+URL: https://fsv.sourceforge.net/
 Summary: Fsv - 3D File System Visualizer
 Source: %{name}-%{version}.tar.bz2
 Buildrequires: gtk+-devel MesaGLU-devel glib-devel
