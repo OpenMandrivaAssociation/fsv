@@ -10,6 +10,11 @@ License: LGPL
 URL: https://fsv.sourceforge.net/
 Summary: Fsv - 3D File System Visualizer
 Source: %{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires: gtk+-devel MesaGLU-devel glib-devel
 Buildrequires: gtkglarea-devel 
 BuildRoot: %{_tmppath}/%{name}-buildroot
