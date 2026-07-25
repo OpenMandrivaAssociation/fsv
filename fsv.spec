@@ -1,6 +1,6 @@
 %define name fsv
 %define version 0.9
-%define release %mkrel 17
+%define release 18
 
 Name: %{name}
 Version: %{version}
